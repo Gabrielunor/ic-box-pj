@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 35%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 213 100% 24%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 0 0% 46%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 75%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --unavaliable-foreground: 0 0% 15%;
+    --best-profile-foreground: 223 61% 32%;
+    --good-profile-foreground: 102 100% 35%;
+    --average-profile-foreground: 47 89% 52%;
+    --risk-profile-foreground: 32 93% 55%;
+    --high-risk-profile-foreground: 5 67% 53%;
+
+    --evaluate: 32, 93%, 55%, 0.2;
+
+    --deny: 0, 84%, 60%, 0.2;
+
+    --border: 0 0% 85%;
+    --button: 213 100% 24%;
+    --input: 0 0% 46%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .help-menus::-webkit-scrollbar {
+    @apply w-1;
+  }
+  .help-menus::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the thumb */
+    border-radius: 6px; /* Rounded corners */
+  }
+  .help-menus::-webkit-scrollbar-track:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+@media print {
+  body {
+    zoom: 95%;
+  }
+
+  @page {
+    margin: 1;
+  }
+}
