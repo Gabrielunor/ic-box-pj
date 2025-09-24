@@ -1,9 +1,10 @@
 import { useICBoxPJStore } from "@/lib/store";
 import { handleErrors } from "@/utils/handleErrors";
 import axios, { AxiosError } from "axios";
+import { APIGEE_URL } from "@/config";
 
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_APIGEE_URL,
+  baseURL: APIGEE_URL,
   headers: {
     "Content-Type": "application/json",
   },
